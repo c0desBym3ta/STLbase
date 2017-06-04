@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/STLbase.dir/main.cpp.o CMakeFiles/STLbase.dir/Date.cpp.o CMakeFiles/STLbase.dir/Task.cpp.o  -o STLbase 

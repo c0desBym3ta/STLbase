@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/root/CLionProjects/STL/STLbase/Date.cpp
+Date.h
+/root/CLionProjects/STL/STLbase/Date.h
+
+/root/CLionProjects/STL/STLbase/Date.h
+
+/root/CLionProjects/STL/STLbase/Task.cpp
+Task.h
+/root/CLionProjects/STL/STLbase/Task.h
+
+/root/CLionProjects/STL/STLbase/Task.h
+string
+-
+iostream
+-
+Date.h
+/root/CLionProjects/STL/STLbase/Date.h
+
+/root/CLionProjects/STL/STLbase/main.cpp
+iostream
+-
+
