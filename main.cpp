@@ -28,6 +28,7 @@ int main() {
     agendaVector.push_back(t2);
     agendaVector.push_back(t3);
 
+
     //Will be printing from 2 times. One for the push back operation.
     std::cout << "Normanl Vector Printing. " << std::endl;
     std::cout << "------------------------" << std::endl;
@@ -41,12 +42,12 @@ int main() {
             std::cout << itr->description << std::endl;
     line();
 
+
     std::cout << "Normal List Printing." << std::endl;
     std::cout << "---------------------" << std::endl;
-    /*std::cout << "---------------------" << std::endl;
-    for(int i = 0; i<agendaList.size(); i++)
-        std::cout << (
-    */
+   //for(int i = 0; i<agendaList.size(); i++)
+        //std::cout << (
+
     line();
 
         std::cout << "Printing Using AutoItr." << std::endl;
@@ -54,6 +55,53 @@ int main() {
         for(auto itr = agendaList.begin(); itr != agendaList.end(); itr++)
             std::cout << itr->description << std::endl;
     line();
+
+    //COMPLETE IF IT'S COMPLETE. Use the normal way to search.
+    std::cout << "CHECK IF DONE OR NOT!" << std::endl;
+    std::cout << "---------------------" << std::endl;
+    for(Task &t : agendaVector)
+        if(t.description == "Programming."){
+            std::cout << "Found!" << std::endl;
+            t.done = true;
+        }
+    line();
+
+    //Using the operational way to search.
+    std::cout << "Using find operations of list!" << std::endl;
+    std::cout << "------------------------------" << std::endl;
+    auto itr = std::find((std::begin(agendaList)), std::end(agendaList), t2);
+    if(itr != std::end(agendaList)){
+        std::cout << "FOUND with operations find!" << std::endl;
+        itr->done = true;
+    }
+    line();
+
+    //Making a multiple agenda that is be able to accept date and task.
+    std::multimap<Date, Task> agendaM;
+    Date d1(2017, 03, 01);
+    Date d2(2017, 05, 04);
+    Date d3(2017, 05, 10);
+
+    //Making the pair of Date and Task.
+    agendaM.insert(std::make_pair(d1,t1));
+    agendaM.insert(std::make_pair(d2,t2));
+    agendaM.insert(std::make_pair(d3,t3));
+    agendaM.insert(std::pair <Date, Task> (d3,t3));
+
+    std::cout << "Multiple Agenda!" << std::endl;
+    std::cout << "----------------" << std::endl;
+    Date d4(2017, 05 ,11);
+    auto itrM = agendaM.find(d4);
+    if(itrM != std::end(agendaM))
+        std::cout << itrM->second.description << std::endl;
+    else
+        std::cout << "Nothing to be done!" << std::endl;
+
+    auto results = agendaM.equal_range(d2);
+    for(auto r = results.first; r!= results.second; r++){
+        std::cout << r->second.description << std::endl;
+    }
+
     return 0;
 }
 
