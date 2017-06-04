@@ -27,4 +27,16 @@ Date.h
 /root/CLionProjects/STL/STLbase/main.cpp
 iostream
 -
+list
+-
+vector
+-
+map
+-
+algorithm
+-
+Task.h
+/root/CLionProjects/STL/STLbase/Task.h
+string
+-
 

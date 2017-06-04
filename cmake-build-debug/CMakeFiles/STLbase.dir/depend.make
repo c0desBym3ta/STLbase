@@ -8,5 +8,7 @@ CMakeFiles/STLbase.dir/Task.cpp.o: ../Date.h
 CMakeFiles/STLbase.dir/Task.cpp.o: ../Task.cpp
 CMakeFiles/STLbase.dir/Task.cpp.o: ../Task.h
 
+CMakeFiles/STLbase.dir/main.cpp.o: ../Date.h
+CMakeFiles/STLbase.dir/main.cpp.o: ../Task.h
 CMakeFiles/STLbase.dir/main.cpp.o: ../main.cpp
 
